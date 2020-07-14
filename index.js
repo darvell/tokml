@@ -48,6 +48,9 @@ function feature(options, styleHashesArray) {
                     styleReference = tag('styleUrl', '#' + styleHash);
                 }
                 // Note that style of GeometryCollection / MultiGeometry is not supported
+            } else if (_.properties.styleUrl) {
+                // add the styleUrl Property to the kml, if set manually in geoJson.
+                styleReference = tag('styleUrl', _.properties.styleUrl);
             }
         }
 
