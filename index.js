@@ -57,7 +57,7 @@ function feature(options, styleHashesArray) {
         return styleDefinition + tag('Placemark',
             name(_.properties, options) +
             description(_.properties, options) +
-            extendeddata(_.properties) +
+            // extendeddata(_.properties) +
             timestamp(_.properties, options) +
             geometryString +
             styleReference);
